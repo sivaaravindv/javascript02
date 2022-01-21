@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <div class="sidebar-top">
+          <div class="big">
+            <div class="circle">
+              <div class="small"></div>
+              <div class="small"></div>
+              <div class="small"></div>
+              <div class="small"></div>
+            </div>
+          </div>
+          <div class="option">
+            <i class="fas fa-cube"></i>
+          </div>
+          <div class="option">
+            <i class="far fa-window-maximize"></i>
+            <span class="badge"></span></i></a
+          >
+          </div>
+          <div class="option last-opt">
+            <i class="far fa-comment-dots"></i>
+            <span class="badge"></span></i></a
+          >
+          </div>
+          <div class="option">
+            <i class="far fa-window-maximize"></i>
+          </div>
+        </div>
+        <div class="sidebar-mid">
+          <div class="option first-option">
+            <i class="fas fa-user-check"></i>
+          </div>
+          <div class="option">
+            <i class="fas fa-user-shield"></i>
+          </div>
+          <div class="option last-opt">
+            <i class="fas fa-user-friends"></i>
+          </div>
+        </div>
+        <div class="sidebar-bottom">
+          <div class="avatar">
+            <img src="./img/guy3.png" alt="" />
+          </div>
+          <div class="avatar">
+            <img src="./img/guy4.png" alt="" />
+          </div>
+          <div class="avatar">
+            <img src="./img/guy5.png" alt="" />
+          </div>
+          <div class="add-avatar">
+            <i class="fas fa-plus"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="main">
+      <div class="wrapper">
+        <div class="topper">
+          <div class="dots"><i class="fas fa-ellipsis-v"></i></div>
+          <div class="accountimg"><img src="./img/guy3.png" alt="" /></div>
+        </div>
+        <div class="top-tool">
+          <div class="top-left">
+            <button class="search-bar" onclick="popover()">
+              <i class="fas fa-search"></i>
+              <p>Search...</p>
+            </button>
+            <div class="top-left-inner">
+              <div class="note"><i class="far fa-sticky-note"></i></div>
+              <div class="inbox"><i class="fas fa-inbox"></i></div>
+              <div class="dots"><i class="fas fa-ellipsis-v"></i></div>
+            </div>
+          </div>
+          <div class="top-right">
+            <h4>My Calender</h4>
+            <h4>Upgrade to Pro!</h4>
+          </div>
+
+          <div class="search-sug" id="mySugg">
+            <div class="wizard">
+              <div class="close-button" onclick="closepop()">
+                <i class="fas fa-times"></i>
+              </div>
+              <input type="text" placeholder="Type Your Keywords" />
+            </div>
+            <ul class="sugglist">
+              <h5>Recent Searches</h5>
+              <li>
+                <a href="#"
+                  ><span class="imgspan"
+                    ><img src="./img/logo-3d-png-9047.png" alt=""
+                  /></span>
+                  <span class="titlespan"
+                    ><h4>Earning by items with...</h4> </span
+                  ><span class="iconspan"
+                    ><i class="fas fa-angle-right"></i></span
+                ></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><span class="imgspan"
+                    ><img src="./img/logo-3d-png-9054 (1).png" alt=""
+                  /></span>
+                  <span class="titlespan"><h4>This months statement</h4> </span
+                  ><span class="iconspan"
+                    ><i class="fas fa-angle-right"></i></span
+                ></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><span class="imgspan"
+                    ><img
+                      src="./img/kisspng-logo-barricade-tape-abstract-religion-abstract-logo-5af116ce2a1c85.2622598215257494541725.png"
+                      alt=""
+                  /></span>
+                  <span class="titlespan"
+                    ><h4>How many sales I got...</h4> </span
+                  ><span class="iconspan"
+                    ><i class="fas fa-angle-right"></i></span
+                ></a>
+              </li>
+            </ul>
+            <a href="#" class="advance">Advanced Search</a>
+          </div>
+        </div>
+        <div class="graphdiv">
+          <div class="graphdiv-top">
+            <h2 class="graphdiv-title">Your Earnings</h2>
+            <div class="datepicker">
+              <div class="le"><i class="fas fa-angle-left"></i></div>
+              <div class="dates"><h3>December,2020</h3></div>
+              <div class="ri"><i class="fas fa-angle-right"></i></div>
+            </div>
+          </div>
+          <div class="graphdiv-mid">
+            <div class="progress">
+              <div class="semi-donut" 
+     style="--percentage : 50;">
+  <h3 style="color: black;">50%</h3>
+           </div>
+           <h6><span><i class="fas fa-chart-line"></i>18% </span>Faster</h6>
+          <p>Only 50% of the parameters are initiated in the model</p>
+      <div class="stats">
+          <div class="idam"><span>&nbsp;</span><h6>Active</h6></div>
+        <div class="valam"><span>&nbsp;</span><h6>Inactive</h6></div>
+         </div>
+            </div>
+            <div class="barchart"><canvas id="myChart" ></canvas>
+
+            </canvas></div>
+          </div>
+        </div>
+        <div class="freelancer">
+          <h2 class="freelancer-title">Top Freelancers</h2>
+          <div class="freelancers">
+            <div class="people">
+              <div class="peopleimg"><img src="./img/guy3.png" alt="" /></div>
+              <div class="details">
+                <p>John Smith</p>
+                <h4>California, USA</h4>
+              </div>
+            </div>
+            <div class="people">
+              <div class="peopleimg"><img src="./img/guy4.png" alt="" /></div>
+              <div class="details">
+                <p>Edward den</p>
+                <h4>oslo, Norway</h4>
+              </div>
+            </div>
+            <div class="people">
+              <div class="peopleimg"><img src="./img/guy5.png" alt="" /></div>
+              <div class="details">
+                <p>Harley Davice</p>
+                <h4>Montreal, Canada</h4>
+              </div>
+            </div>
+            <div class="add-people"><i class="fas fa-plus"></i></div>
+          </div>
+        </div>
+        <div class="project">
+          <h2 class="project-title">Your Projects</h2>
+          <ul class="containor">
+            <li class="draggable" draggable="true"><a >
+              <div class="timer">
+                <p>3:30 PM</p>
+                <h4>30 minutes</h4>
+              </div>
+              <div class="sept"></div>
+              <div class="logor">
+                <img
+                  src="./img/kisspng-logo-barricade-tape-abstract-religion-abstract-logo-5af116ce2a1c85.2622598215257494541725.png"
+                  alt=""
+                />
+              </div>
+              <div class="location">
+                <p>Productivity App</p>
+                <h4>India</h4>
+              </div>
+              <div class="dating">
+                <p>September 10th</p>
+                <h5>confirmed</h5>
+              </div>
+              <div class="status completed">Completed</div>
+              <div class="finisher">
+                <i class="far fa-sticky-note"></i>
+              </div>
+              
+            </a><div class="closer out"><i class="fa-solid fa-trash-can "></i>
+              <i class="fas fa-times "></i></div></li>
+            <li class="draggable" draggable="true"><a >
+              <div class="timer">
+                <p>4:30 PM</p>
+                <h4>30 minutes</h4>
+              </div>
+              <div class="sept"></div>
+              <div class="logor">
+                <img
+                  src="./img/kisspng-abstract-art-clip-art-religion-abstract-logo-5af116cd63bc80.7666994815257494534085.png"
+                  alt=""
+                />
+              </div>
+              <div class="location">
+                <p>Trading App</p>
+                <h4>Australia</h4>
+              </div>
+              <div class="dating">
+                <p>September 12th</p>
+                <h5>confirmed</h5>
+              </div>
+              <div class="status pending">In Progress</div>
+              <div class="finisher">
+                <i class="far fa-sticky-note"></i>
+              </div>
+              
+            </a><div class="closer out"><i class="fa-solid fa-trash-can "></i>
+              <i class="fas fa-times "></i></div></li>
+            <li class="draggable" draggable="true"><a >
+              <div class="timer">
+                <p>6:00 PM</p>
+                <h4>60 minutes</h4>
+              </div>
+              <div class="sept"></div>
+              <div class="logor">
+                <img
+                  src="./img/kisspng-tennyson-knolls-elementary-school-sherrelwood-elem-5b127bde5c9738.7598457515279380143793.png"
+                  alt=""
+                />
+              </div>
+              <div class="location">
+                <p>Healthcare App</p>
+                <h4>Singapore</h4>
+              </div>
+              <div class="dating">
+                <p>September 14th</p>
+                <h5>confirmed</h5>
+              </div>
+              <div class="status completed">Completed</div>
+              <div class="finisher">
+                <i class="far fa-sticky-note"></i>
+              </div>
+              
+            </a></a><div class="closer out"><i class="fa-solid fa-trash-can "></i>
+              <i class="fas fa-times "></i></div></li></li>
+            <li class="draggable" draggable="true"><a >
+              <div class="timer">
+                <p>1:30 PM</p>
+                <h4>45 minutes</h4>
+              </div>
+              <div class="sept"></div>
+              <div class="logor">
+                <img
+                  src="./img/kisspng-logo-barricade-tape-abstract-religion-abstract-logo-5af116ce2a1c85.2622598215257494541725.png"
+                  alt=""
+                />
+              </div>
+              <div class="location">
+                <p>Dating App</p>
+                <h4>USA</h4>
+              </div>
+              <div class="dating">
+                <p>September 16th</p>
+                <h5>confirmed</h5>
+              </div>
+              <div class="status pending">In Progress</div>
+              <div class="finisher">
+                <i class="far fa-sticky-note"></i>
+              </div>
+             
+            </a></a><div class="closer out"><i class="fa-solid fa-trash-can "></i>
+              <i class="fas fa-times "></i></div></li></li>
+          </ul>
+
+          <div class="empty" id="empty">
+            <h1>No project scheduled</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <aside class="rightbar">
+      <div class="right-top">
+        <div class="username">
+          <h3>Hi, Michael</h3>
+          <div class="accountimg"><img src="./img/guy3.png" alt="" /></div>
+        </div>
+        <div class="todo-title">
+          <h2>Todo Tasks</h2>
+          <div class="search-opt">
+            <a href="#"><i class="fas fa-search"></i></a>
+          </div>
+          <div class="add-opt add-avatar">
+            <a href="#"><i class="fas fa-plus"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="right-mid">
+        <div class="todo-tasks">
+          <div class="todo-tasks-date">
+            <h3>6 october</h3>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+          <div class="todo-tasks-des">
+            <div class="des-left">
+              <h2>08:30</h2>
+              <h4>09:00</h4>
+            </div>
+            <div class="des-separater"></div>
+            <div class="des-right">
+              <h4>Marketing</h4>
+              <p>3 Market sales</p>
+            </div>
+          </div>
+          <div class="todo-tasks-des">
+            <div class="des-left">
+              <h2>08:30</h2>
+              <h4>09:00</h4>
+            </div>
+            <div class="des-separater"></div>
+            <div class="des-right">
+              <h4>Developing</h4>
+              <p>Java Tasks</p>
+            </div>
+          </div>
+        </div>
+        <div class="todo-tasks">
+          <div class="todo-tasks-date">
+            <h3>7 october</h3>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+          <div class="todo-tasks-des">
+            <div class="des-left">
+              <h2>08:30</h2>
+              <h4>09:00</h4>
+            </div>
+            <div class="des-separater"></div>
+            <div class="des-right">
+              <h4>Tasks</h4>
+              <p>Project</p>
+            </div>
+          </div>
+          <div class="todo-tasks-des">
+            <div class="des-left">
+              <h2>08:30</h2>
+              <h4>09:00</h4>
+            </div>
+            <div class="des-separater"></div>
+            <div class="des-right">
+              <h4>Sales</h4>
+              <p>Successfull sales</p>
+            </div>
+          </div>
+        </div>
+        <div class="todo-tasks">
+          <div class="todo-tasks-date">
+            <h3>8 october</h3>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+          <div class="todo-tasks-des">
+            <div class="des-left">
+              <h2>08:30</h2>
+              <h4>09:00</h4>
+            </div>
+            <div class="des-separater"></div>
+            <div class="des-right">
+              <h4>Developing</h4>
+              <p>App development</p>
+            </div>
+          </div>
+          <div class="todo-tasks-des">
+            <div class="des-left">
+              <h2>08:30</h2>
+              <h4>09:00</h4>
+            </div>
+            <div class="des-separater"></div>
+            <div class="des-right">
+              <h4>Marketing</h4>
+              <p>App Marketing</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="book-trip-btn">Book Your Trip</a>
+    </aside>
+
+    <script>
+      function popover() {
+        
+        document.getElementById('mySugg').style.display = 'block';
+      
+      }
+      function closepop() {
+        document.getElementById('mySugg').style.display = 'none';
+      }
+
+      var closebtns = document.getElementsByClassName("closer");
+      let msg= document.getElementsByClassName("empty");
+      let list= document.getElementsByClassName("containor");
+var i;
+let limit = closebtns.length -1;
+for (i = 0; i < closebtns.length; i++) {
+  closebtns[i].addEventListener("click", function() {
+    if(closebtns[i] === limit){
+      console.log("ran this");
+    }
+    this.parentElement.style.display = 'none';
+  
+  });
+
+  
+}
+
+
+
+
+const yLabels = {
+    0 : '5k',
+    10000 : '10k',
+    20000 : '20k',
+    30000 : '30ks',
+    40000 : '40k'
+}
+
+
+  // setup 
+  const data = {
+      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Aug', 'Sep', 'Oct'],
+      datasets: [{
+        label: 'Monthly Earnings',
+        data: [42000, 36000, 15000, 10000, 18000, 36000, 20000, 40000, 27000],
+        backgroundColor: [
+          'rgb(216, 216, 216)',
+          'rgb(216, 216, 216)',
+          'rgb(216, 216, 216)',
+          'rgb(216, 216, 216)',
+          'rgb(252, 108, 45)',
+          'rgba(0, 7, 179, 1)',
+          'rgb(216, 216, 216)',
+
+        ],
+        borderColor: [
+          'rgb(216, 216, 216)',
+          'rgb(216, 216, 216)',
+          'rgb(216, 216, 216)',
+          'rgb(216, 216, 216)',
+          'rgb(252, 108, 45)',
+          'rgba(0, 7, 179, 1)',
+          'rgb(216, 216, 216)'
+        ],
+        borderWidth: 1,
+        categoryPercentage:1.0,
+        barPercentage:1.0,
+      }]
+    };
+
+    // config 
+    const config = {
+      type: 'bar',
+      data,
+      options: {
+        maintainAspectRatio: false,
+        plugins:{
+          legend:{
+            display: false
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+                    beginAtZero: true,
+                    callback: function(value, index, values) {
+                        return yLabels[value];
+                    }
+                },
+                grid: {
+                   borderDash: [6, 5]
+                }
+          },
+          x:{
+            grid:{
+              display:false
+            }
+          }
+        }
+      }
+    };
+
+    // render init block
+   
+
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+   
+    </script>
+  </body>
+</html>
