@@ -323,19 +323,19 @@ nav .container {
   left: 69px;
   right: 390px;
   width: calc(100% - 459px);
-  overflow-x: hidden;
-  height: auto;
+
   background-color: rgb(249, 249, 249);
   border-right: 0.5px solid rgb(199, 199, 199);
   padding-left: 2.5rem;
   padding-right: 1.5rem;
   padding-top: 1.5rem;
+  height: 100%;
 }
 
 .wrapper {
   box-sizing: border-box;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .topper {
@@ -672,10 +672,16 @@ nav .container {
 .project,
 .freelancer {
   width: 100%;
+
   padding-top: 0.5rem;
 }
-.contain {
+.project {
+  height: auto;
+  position: relative;
+}
+.containor {
   margin-top: 1rem;
+  height: auto;
 }
 .draggable {
   position: relative;
@@ -690,12 +696,13 @@ nav .container {
   justify-content: space-around;
   align-items: center;
   animation: slide-in 0.6s ease-in;
+  z-index: 3;
 }
 .draggable:nth-child(2) {
   animation-delay: 0.3s;
 }
 .draggable:nth-child(3) {
-  animation-delay: 6s;
+  animation-delay: 0.6s;
 }
 .draggable:nth-child(4) {
   animation-delay: 0.9s;
@@ -704,6 +711,10 @@ nav .container {
   0% {
     transform: translateY(100px);
     opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
   }
 }
 
@@ -779,14 +790,25 @@ nav .container {
 }
 
 .empty {
+  position: absolute;
+  top: 0;
   display: none;
   width: 100%;
-  height: 100px;
+  height: 81px;
   border: 3px rgb(212, 212, 212) dashed;
   border-radius: 6px;
 
   justify-content: center;
   align-items: center;
+  transform: translateY(80px);
+  z-index: 0;
+  animation: appear 6s;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
 }
 .empty h1 {
   color: rgb(212, 212, 212);
@@ -802,7 +824,7 @@ nav .container {
 
 @keyframes lance_in {
   0% {
-    transform: translateX(60px);
+    padding-left: 10rem;
     opacity: 0;
   }
 }
@@ -1017,6 +1039,9 @@ nav .container {
     content: '';
     width: 150px;
     height: 150px;
+  }
+  .project {
+    height: auto;
   }
 }
 
