@@ -434,13 +434,14 @@
       let msg= document.getElementsByClassName("empty");
       let list= document.getElementsByClassName("containor");
 var i;
-let limit = closebtns.length -1;
+
 for (i = 0; i < closebtns.length; i++) {
   closebtns[i].addEventListener("click", function() {
-    if(closebtns[i] === limit){
-      console.log("ran this");
-    }
+  
     this.parentElement.style.display = 'none';
+    if(i===4){
+      empty.style.display = 'flex';
+    }
   
   });
 

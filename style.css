@@ -803,7 +803,6 @@ nav .container {
 }
 
 .empty {
-  position: absolute;
   top: 0;
   display: none;
   width: 100%;
@@ -813,7 +812,7 @@ nav .container {
 
   justify-content: center;
   align-items: center;
-  transform: translateY(80px);
+
   z-index: 0;
   animation: appear 6s;
 }
@@ -845,6 +844,9 @@ nav .container {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+.freelancers::-webkit-scrollbar-track {
+  opacity: 0;
 }
 .freelancers .people .peopleimg {
   width: 57px;
@@ -1092,10 +1094,10 @@ nav .container {
     display: none;
   }
   .closer {
-    position: absolute;
     top: 0;
     right: 0;
-    display: none;
+    display: flex;
+    visibility: hidden;
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -1112,7 +1114,7 @@ nav .container {
   .draggable a:active ~ .closer,
   .draggable a:hover ~ .closer,
   .draggable a:focus ~ .closer {
-    display: flex;
+    visibility: visible;
   }
   .closer i:nth-child(1) {
     display: block;
@@ -1137,7 +1139,6 @@ nav .container {
     width: 54px;
     height: 21px;
     font-size: 0.6rem;
-    margin-right: 32px;
   }
   .graphdiv-mid {
     height: 27vh;
