@@ -196,10 +196,10 @@
             <div class="add-people"><i class="fas fa-plus"></i></div>
           </div>
         </div>
-        <div class="project">
+        <div class="project" onload="checkEmpty()">
           <h2 class="project-title">Your Projects</h2>
           <ul class="containor">
-            <li class="draggable" draggable="true" id="drag1" onclick="closedragone()"><a >
+            <li class="draggable" draggable="true" id="drag1" >
               <div class="timer">
                 <p>3:30 PM</p>
                 <h4>30 minutes</h4>
@@ -224,12 +224,11 @@
                 <i class="far fa-sticky-note"></i>
               </div>
               
-            </a>
             <div class="closer">
               <i class="fas fa-times "></i></div>
               <div class="out out01" id="out01"><i class="fa-solid fa-trash-can "></i></div>
             </li>
-            <li class="draggable" draggable="true" id="drag2" onclick="closedragtwo()"><a >
+            <li class="draggable" draggable="true" id="drag2" >
               <div class="timer">
                 <p>4:30 PM</p>
                 <h4>30 minutes</h4>
@@ -254,10 +253,10 @@
                 <i class="far fa-sticky-note"></i>
               </div>
               
-            </a><div class="closer">
+            <div class="closer">
               <i class="fas fa-times "></i></div>
               <div class="out out02" ><i class="fa-solid fa-trash-can "></i></div></li>
-            <li class="draggable" draggable="true" id="drag3" onclick="closedragthree("><a >
+            <li class="draggable" draggable="true" id="drag3" >
               <div class="timer">
                 <p>6:00 PM</p>
                 <h4>60 minutes</h4>
@@ -282,10 +281,10 @@
                 <i class="far fa-sticky-note"></i>
               </div>
               
-            </a><div class="closer">
+            <div class="closer">
               <i class="fas fa-times "></i></div>
               <div class="out out03"><i class="fa-solid fa-trash-can "></i></div></li>
-            <li class="draggable" draggable="true" id="drag4" onclick="closedragfour()"><a >
+            <li class="draggable" draggable="true" id="drag4" >
               <div class="timer">
                 <p>1:30 PM</p>
                 <h4>45 minutes</h4>
@@ -310,7 +309,7 @@
                 <i class="far fa-sticky-note"></i>
               </div>
              
-            </a><div class="closer">
+            <div class="closer">
               <i class="fas fa-times "></i></div>
               <div class="out out04"><i class="fa-solid fa-trash-can "></i></div></li>
           </ul>
@@ -445,7 +444,9 @@
 
       var closebtns = document.getElementsByClassName("closer");
       var outbtns = document.getElementsByClassName("out");
-var i;
+      let drag = document.getElementsByClassName("draggable")
+      let emp =document.getElementById("empty");
+var i,j;
 
 
 for (i = 0; i < closebtns.length; i++) {
@@ -456,9 +457,10 @@ for (i = 0; i < closebtns.length; i++) {
     
    
   });
-  console.log(i);
   
+
 }
+
 
 for (i = 0; i < outbtns.length; i++) {
   outbtns[i].addEventListener("click", function() {
@@ -471,6 +473,7 @@ for (i = 0; i < outbtns.length; i++) {
   console.log(i);
   
 }
+
 
 window.onload = function () { 
     let boxes = [].slice.call(document.querySelectorAll(".draggable")).reverse();
@@ -487,6 +490,13 @@ window.onload = function () {
     }
 }
 
+function checkEmpty(){
+  for (j = 0; j < closebtns.length; j++){
+    if (drag.style.display === "none") {
+emp.style.display='flex';
+} 
+  }
+}
 
 const yLabels = {
     0 : '5k',

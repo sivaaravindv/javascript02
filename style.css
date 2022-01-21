@@ -731,7 +731,7 @@ nav .container {
 #drag4 {
   opacity: 0;
 }
-.draggable a {
+.draggable {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -1085,7 +1085,7 @@ nav .container {
   .draggable {
     height: 81px;
   }
-  .draggable a {
+  .draggable {
     padding: 0.5rem;
   }
   .draggable .finisher,
@@ -1097,6 +1097,7 @@ nav .container {
   }
 
   .out {
+    position: absolute;
     top: 0;
     right: 0;
     display: none;
@@ -1111,15 +1112,15 @@ nav .container {
   .out i {
     color: aliceblue;
   }
-  .draggable a:active,
-  .draggable a:hover,
-  .draggable a:focus {
+  .draggable:active,
+  .draggable:hover,
+  .draggable:focus {
     box-shadow: 0px 0px 30px 1px rgba(214, 214, 214, 0.75);
   }
 
-  .draggable a:active ~ .out,
-  .draggable a:hover ~ .out,
-  .draggable a:focus ~ .out {
+  .draggable:active .out,
+  .draggable:hover .out,
+  .draggable:focus .out {
     display: flex;
   }
   .closer i:nth-child(1) {
